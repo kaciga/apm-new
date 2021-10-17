@@ -7,4 +7,5 @@ export interface ITodo {
     imgUrl: string
     ar: number;
     isDone: boolean;
+    star: number;
 }

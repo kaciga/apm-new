@@ -33,6 +33,7 @@
               <th>Hol?</th>
               <th>Kinek?</th>
               <th>Ára</th>
+              <th>Tetszési index</th>
               <th>Elkészült?</th>
             </tr>
           </thead>
@@ -52,12 +53,12 @@
               <td>{{ todo.hol | lowercase }}</td>
               <td>{{ todo.kinek }}</td>
               <td>{{ todo.ar | currency: 'EUR': 'symbol'}}</td>
+              <td><pm-stars 
+                [rating]='todo.star'
+                (ratingClicked)="onRatingClicked($event)"
+                ></pm-stars></td>
               <td *ngIf="todo.isDone">
                 <fa-icon [icon] = "faCheck"></fa-icon>
-                </td>
-              <td>
-                <!-- <pm-star> -->
-                <!-- </pm-star> -->
               </td>
             </tr>
           </tbody>

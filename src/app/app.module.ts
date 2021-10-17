@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TodoListsComponent } from './components/todo-lists/todo-lists.component';
 import { TableComponent } from './components/table/table.component';
 import { FormsModule } from '@angular/forms';
+import { StarsComponent } from './components/stars/stars.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     TodoListsComponent,
-    TableComponent
+    TableComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,

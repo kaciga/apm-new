@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-
+import { faCheck, faStar } from '@fortawesome/free-solid-svg-icons';
 import { ITodo } from 'src/app/todo';
+import { StarsComponent } from '../stars/stars.component';
 
 @Component({
   selector: 'pm-table',
@@ -10,7 +10,9 @@ import { ITodo } from 'src/app/todo';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
+  onNotify(message: string): void {}
   faCheck = faCheck;
+  //faStar = faStar;
   pageTitle = "Táblázat";
   imageWidth = 200;
   imageMargin = 2;
@@ -39,7 +41,9 @@ export class TableComponent implements OnInit {
       "kinek": "Mindenki",
       "imgUrl": "assets/ebredes.jpg",
       "ar": 0,
-      "isDone": true
+      "isDone": true,
+      "star": 2,
+
     },
     {
       "id": 2,
@@ -49,7 +53,8 @@ export class TableComponent implements OnInit {
       "kinek": "Mindenki",
       "imgUrl": "assets/ido.jpg",
       "ar": 0,
-      "isDone": true
+      "isDone": true,
+      "star": 3,
     },
     {
       "id": 3,
@@ -59,7 +64,8 @@ export class TableComponent implements OnInit {
       "kinek": "Felnőtteknek",
       "ar": 2,
       "imgUrl": "assets/coffee.jpg",
-      "isDone": false
+      "isDone": false,
+      "star": 3.5,
     }
   ];
 
@@ -73,9 +79,15 @@ export class TableComponent implements OnInit {
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
+
   ngOnInit(): void {
     this.listFilter = '';
   }
-  
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Táblázat: ' + message;
+    console.log("ha");
+    
+  }
 
 }

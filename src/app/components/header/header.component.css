@@ -1,0 +1,7 @@
+header {
+    overflow: auto;
+    max-width: 1500px;
+    min-width: 300px;
+    border: 10px dotted blueviolet;
+    margin: 30px auto 30px;
+}

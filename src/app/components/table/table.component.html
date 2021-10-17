@@ -1,0 +1,67 @@
+<div>
+    <div>
+      {{pageTitle}}
+    </div>
+    <div>
+      <div class='row'>
+        <div><h3>Keress egy feladatra a táblázatban:</h3></div>
+        <div>
+          <input type='text'
+          [(ngModel)]="listFilter" />
+        </div>
+      </div>
+      <div class='row'>
+        <div>
+          <h4 [ngStyle]="{'text-align': 'center'}">
+            Szűrés a következő tennivalóra: {{ listFilter  }}
+          </h4>
+        </div>
+      </div>
+      <div>
+        <table *ngIf='todos.length'>
+          <thead>Tennivalók:
+            <tr>
+              <th>
+                <button 
+                (click)='toggleImage()'>
+                  {{ showImage ? 'Kép nélkül nézem!' : 'Mutasd képen!'}} 
+                </button>
+              </th>
+              <th>Sorszám</th>
+              <th>Mit?</th>
+              <th>Mikor?</th>
+              <th>Hol?</th>
+              <th>Kinek?</th>
+              <th>Ára</th>
+              <th>Elkészült?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr  *ngFor="let todo of filteredTodos">
+              <td>
+                <img
+                  *ngIf='showImage'
+                  [src]='todo.imgUrl'
+                  [style.width.px]='imageWidth'
+                  [style.margin.px]='imageMargin'>
+              </td>
+              
+              <td>{{ todo.id }}</td>
+              <td>{{ todo.feladat | uppercase }}</td>
+              <td>{{ todo.ido }}</td>
+              <td>{{ todo.hol | lowercase }}</td>
+              <td>{{ todo.kinek }}</td>
+              <td>{{ todo.ar | currency: 'EUR': 'symbol'}}</td>
+              <td *ngIf="todo.isDone">
+                <fa-icon [icon] = "faCheck"></fa-icon>
+                </td>
+              <td>
+                <!-- <pm-star> -->
+                <!-- </pm-star> -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

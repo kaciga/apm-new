@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { faCheck, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { TodoService } from 'src/app/sevices/todo.service';
 import { ITodo } from 'src/app/todo';
-import { StarsComponent } from '../stars/stars.component';
+//import { StarsComponent } from '../stars/stars.component';
+
+
 
 @Component({
   selector: 'pm-table',
@@ -10,16 +13,16 @@ import { StarsComponent } from '../stars/stars.component';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
+  private _todoService: any;
   onNotify(message: string): void {}
   faCheck = faCheck;
-  //faStar = faStar;
   pageTitle = "Táblázat";
   imageWidth = 200;
   imageMargin = 2;
   showImage: boolean = false;
   //listFilter: string = 'Mosdj meg!'
   
-  private _listFilter: string = '';
+  private _listFilter = '';
   get listFilter() {
     return this._listFilter;
   }
@@ -27,49 +30,18 @@ export class TableComponent implements OnInit {
     this._listFilter = value;
     console.log("set-erben:", value);
     this.filteredTodos = this.performFilter(value);
-    
   }
 
   filteredTodos: ITodo[] = [];
+  todos: ITodo[] = [];
 
-  todos: ITodo[] = [
-    {
-      "id": 1,
-      "feladat": "Kelj fel időben!",
-      "ido": "5 óra",
-      "hol": "Hálószoba",
-      "kinek": "Mindenki",
-      "imgUrl": "assets/ebredes.jpg",
-      "ar": 0,
-      "isDone": true,
-      "star": 2,
+  /*ez tökugyanaz, mint az utána következő, short hand TS-syntax:
+  constructor(todoService: TodoService) { 
+    this._todoService = TodoService;
+  }*/
+  constructor(private todoService: TodoService) {
 
-    },
-    {
-      "id": 2,
-      "feladat": "Mosdj meg!",
-      "ido": "5:10 óra",
-      "hol": "Fürdőszoba",
-      "kinek": "Mindenki",
-      "imgUrl": "assets/ido.jpg",
-      "ar": 0,
-      "isDone": true,
-      "star": 3,
-    },
-    {
-      "id": 3,
-      "feladat": "Főzz kávét!",
-      "ido": "5:15 óra",
-      "hol": "Konyha",
-      "kinek": "Felnőtteknek",
-      "ar": 2,
-      "imgUrl": "assets/coffee.jpg",
-      "isDone": false,
-      "star": 3.5,
-    }
-  ];
-
-  constructor() { }
+  }
   
   performFilter(filterBy: string): ITodo[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -81,7 +53,9 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listFilter = '';
+    this.todos = this.todoService.getTodos();
+    //this.listFilter = this.todos; hiba volt így kikommenteltem, nem engedte ezt a string volta miatt
+    //this.listFilter = 'uhh';
   }
 
   onRatingClicked(message: string): void {

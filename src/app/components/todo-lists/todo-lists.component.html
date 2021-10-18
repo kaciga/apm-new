@@ -1,9 +1,11 @@
 <div class="form">
     <form action ="todoForm"><h2>Napi teendőink</h2></form>
     <div class="form" [ngStyle]="{'text-align': 'center'}">
-        <label for="text">Feladat:</label>
+        <label for="text">
+            <a href="/todos">Feladatok:</a>
+        </label>
         <input type="text" name="feladat" id="1" placeholder="feladat"/>
         <button type="submit">Küldd!</button>
     </div>
 </div>
-<pm-table [ngStyle]="{'text-align': 'center'}"></pm-table>
+<!-- <pm-table [ngStyle]="{'text-align': 'center'}"></pm-table> -->

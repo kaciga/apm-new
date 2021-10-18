@@ -4,10 +4,9 @@ import { TodoService } from 'src/app/sevices/todo.service';
 import { ITodo } from 'src/app/todo';
 //import { StarsComponent } from '../stars/stars.component';
 
-
-
 @Component({
-  selector: 'pm-table',
+  // selector: 'pm-table',
+  template:``,
   templateUrl: './table.component.html',
   styles: ['button {background-color: rgb(153, 39, 125, .5); width: 150px}'],
   styleUrls: ['./table.component.css']

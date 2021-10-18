@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   pageTitle: string = "Anya kódol";
   
-  
-
   constructor() { }
 
   ngOnInit(): void {

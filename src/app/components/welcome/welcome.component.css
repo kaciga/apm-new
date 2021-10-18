@@ -1,0 +1,18 @@
+header, div, button {
+    overflow: auto;
+    max-width: 80%;
+    min-width: 300px;
+    margin: 30px auto 30px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+header {
+    border: 10px dotted blueviolet;
+}
+a {
+    color: rgb(161, 82, 235, 1);
+    margin: 20px;
+}
+button {
+    background: rgb(161, 82, 235, 1);
+}

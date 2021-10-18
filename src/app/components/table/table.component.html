@@ -1,17 +1,17 @@
 <div>
-    <div>
-      <a [routerLink]="['/todo-lists']">{{pageTitle}}</a>
+    <div [ngStyle]="{'text-align': 'center'}">
+      <a [routerLink]="['/todo-lists']" >{{pageTitle | uppercase }}</a>
     </div>
     </div>
     <div><div>
-      <div class='row'>
+      <div [ngStyle]="{'text-align': 'center'}">
         <div><h3>Keress egy feladatra a táblázatban:</h3></div>
         <div>
           <input type='text'
           [(ngModel)]="listFilter" />
         </div>
       </div>
-      <div class='row'>
+      <div>
         <div>
           <h4 [ngStyle]="{'text-align': 'center'}">
             Szűrés a következő tennivalóra: {{ listFilter }}

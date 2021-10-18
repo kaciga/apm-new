@@ -1,5 +1,9 @@
-body {
-    display: flexbox;
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* width: inherit; */
 }
 thead, tr {
     border: 1px solid rgb(68, 58, 58);
@@ -20,6 +24,7 @@ a {
 button {
     background: rgb(161, 82, 235, 1);
 }
-span {
+span, .numeric{
     color: black;
 }
+ 

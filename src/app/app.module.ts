@@ -11,6 +11,7 @@ import { StarsComponent } from './components/stars/stars.component';
 import { AboutComponent } from './components/about/about.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { RouterModule } from '@angular/router';
+import { TodoDetailComponent } from './components/todo-detail/todo-detail.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { RouterModule } from '@angular/router';
     TableComponent,
     StarsComponent,
     AboutComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TodoDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { RouterModule } from '@angular/router';
       //{ path: 'welcome', component: WelcomeComponent },
       { path: 'header', component: WelcomeComponent },
       { path: 'table', component: TableComponent },
-      { path: 'todos', component: TodoListsComponent },
+      //{ path: 'todos', component: TodoDetailsComponent },
+      { path: 'todos/:id', component: TodoDetailComponent },
       { path: 'about', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
      // { path: '**', component: PageNotFoundComponent } vagy  { path: '**', redirectTo: 'welcome', pathMatch: 'full' },

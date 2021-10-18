@@ -6,7 +6,18 @@ import { ITodo } from 'src/app/todo';
 
 @Component({
   // selector: 'pm-table',
-  template:``,
+  // template:`
+  // <nav>
+  //       <a>{{pageTitle}}</a>
+  //       <ul>
+  //         <li><a routerLinkActive='active' routerLink='/welcome'>Home</a></li>
+  //         <li><a routerLinkActive='active' routerLink='/todos'>Teendők</a></li>
+  //       </ul>
+  //   </nav>
+  //   <div class='container'>
+  //     <router-outlet></router-outlet>
+  //   </div>
+  // nav`,
   templateUrl: './table.component.html',
   styles: ['button {background-color: rgb(153, 39, 125, .5); width: 150px}'],
   styleUrls: ['./table.component.css']

@@ -20,7 +20,8 @@
       </div>
       <div>
         <table *ngIf='todos.length'>
-          <thead><a href="/table"><span>Tennivalók:</span></a> 
+          <thead>
+            <a href="/table"><span>Tennivalók:</span></a> 
             <tr>
               <th>
                 <button
@@ -40,6 +41,7 @@
           </thead>
           <tbody>
             <tr  *ngFor="let todo of filteredTodos">
+            
               <td>
                 <img
                   *ngIf='showImage'
@@ -48,7 +50,11 @@
                   [style.margin.px]='imageMargin'>
               </td>
               
-              <td>{{ todo.id }}</td>
+              <td >
+                <a class="numeric" [routerLink]="['/todos', todo.id]">
+                  {{ todo.id }}
+                </a>
+              </td>
               <td>{{ todo.feladat | uppercase }}</td>
               <td>{{ todo.ido }}</td>
               <td>{{ todo.hol | lowercase }}</td>

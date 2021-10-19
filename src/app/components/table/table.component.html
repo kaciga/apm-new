@@ -1,5 +1,5 @@
 <div>
-    <div [ngStyle]="{'text-align': 'center'}">
+    <div [ngStyle]="{'text-align': 'center'}" >
       <a [routerLink]="['/todo-lists']" >{{pageTitle | uppercase }}</a>
     </div>
     </div>
@@ -21,7 +21,7 @@
       <div>
         <table *ngIf='todos.length'>
           <thead>
-            <a href="/table"><span>Tennivalók:</span></a> 
+            <span>Tennivalók:</span>
             <tr>
               <th>
                 <button

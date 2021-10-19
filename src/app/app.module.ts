@@ -12,7 +12,7 @@ import { AboutComponent } from './components/about/about.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { RouterModule } from '@angular/router';
 import { TodoDetailComponent } from './components/todo-detail/todo-detail.component';
-
+import { AddButtonComponent } from './components/add-button/add-button.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { TodoDetailComponent } from './components/todo-detail/todo-detail.compon
     StarsComponent,
     AboutComponent,
     WelcomeComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    AddButtonComponent,
   ],
   imports: [
     BrowserModule,

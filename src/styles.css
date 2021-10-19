@@ -38,7 +38,6 @@ p {
     margin-bottom: 20px;
     padding: 20px, auto;
     font-size: 20px;
-    
 }
 span {
     color: blueviolet;
@@ -53,10 +52,9 @@ input {
     background-color: burlywood;
 }
 button {
-    margin-left: 10px;
     height: 20px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    background-color: burlywood;
+    background-color: rgb(138, 43, 226, 1);
 }

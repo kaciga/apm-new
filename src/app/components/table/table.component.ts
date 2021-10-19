@@ -19,7 +19,7 @@ import { ITodo } from 'src/app/todo';
   //   </div>
   // nav`,
   templateUrl: './table.component.html',
-  styles: ['button {background-color: rgb(153, 39, 125, .5); width: 150px}'],
+  //styles: ['button {background-color: rgb(153, 39, 125, .5);width: 130px}'],
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {

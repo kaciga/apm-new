@@ -24,7 +24,7 @@ export class StarsComponent implements OnChanges {
 
   onClick(): void {
   this.ratingClicked.emit(`A tetszésnyilvánításra ${this.rating} kattintottál!`);
-console.log("haha");
+    console.log("haha"); //nem műxik, nem íródik ki konzolra
 
   }
   

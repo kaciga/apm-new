@@ -11,5 +11,9 @@ export class TodoListsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  toggleAddTodo() {
+    console.log("toggle");
+    
+  }
 
 }

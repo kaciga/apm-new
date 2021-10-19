@@ -3,28 +3,47 @@ table {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* width: inherit; */
 }
 thead, tr {
     border: 1px solid rgb(68, 58, 58);
     background-color: rgb(161, 82, 235, 1);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
 }
 h3, h4, input {
     margin-top: 20px;
+    color: blueviolet;
 }
 th, td {
     text-align: center;
     width: 90px;
 }
-a {
-    color: rgb(161, 82, 235, 1);
+thead:first-child {
+    color: rgb(125, 20, 223);
     line-height: 2;
     font-size: larger;
+    text-align: center;
+    margin-top: 20px;
 }
-button {
-    background: rgb(161, 82, 235, 1);
-}
+
 span, .numeric{
     color: black;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
 }
- 
+th {
+    border: 2px solid blueviolet;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}button {
+    /*visszagomb szín: rgb(138, 43, 226, 1);*/
+    border-color: rgb(66, 12, 66);
+    height: 35px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    justify-content: center;
+}
+a {
+    color: blueviolet;
+    margin-top: 20px;
+}

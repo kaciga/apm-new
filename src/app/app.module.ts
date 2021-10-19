@@ -33,7 +33,7 @@ import { TodoDetailComponent } from './components/todo-detail/todo-detail.compon
       //{ path: 'welcome', component: WelcomeComponent },
       { path: 'header', component: WelcomeComponent },
       { path: 'table', component: TableComponent },
-      //{ path: 'todos', component: TodoDetailsComponent },
+      { path: 'todos', component: TodoListsComponent },
       { path: 'todos/:id', component: TodoDetailComponent },
       { path: 'about', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },

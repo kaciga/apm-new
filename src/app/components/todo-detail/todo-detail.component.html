@@ -1,1 +1,11 @@
-<div>{{ pageTitle }}</div>
+<div>{{ pageTitle + ': ' + todo?.id }}</div> 
+<!-- + todo?.id itt a ? = save navigation property, ha null vagy undefined, a ? nullát ad vissza 
+2. megoldás az ngIf használata-->
+<div>
+    <button (click)='onBack()'>
+        <i class ="fa fa-chevron-left">
+            <fa-icon [icon]= "faChevronLeft">
+            </fa-icon>
+        </i>Vissza
+    </button>
+</div>

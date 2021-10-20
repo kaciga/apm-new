@@ -1,0 +1,21 @@
+button {
+    height: 30px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(138, 43, 226, 1);
+    padding: 10px, 10px;
+    width: 100px;
+    line-height: 2;
+    margin: 5px 5px 20px 5px;
+
+}
+input {
+    height: 30px;
+    text-align: center;
+    margin-right: 5px;
+    font-size: larger;
+}
+a {
+    font-size: larger;
+}

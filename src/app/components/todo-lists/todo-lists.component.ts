@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+//import { Router } from '@angular/router';//?
+//Router
+//import { TodoDetailComponent } from '../todo-detail/todo-detail.component';
+//TodoDetailComponent
 
 @Component({
   selector: 'pm-todo-lists',
@@ -7,13 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListsComponent implements OnInit {
 
-  constructor() { }
+  
 
-  ngOnInit(): void {
-  }
+  constructor() { }//private router: Router
+
+  ngOnInit(): void {}
+
   toggleAddTodo() {
     console.log("toggle");
+    //this.router.navigate([/'todo-detail']);
     
+  
   }
-
 }

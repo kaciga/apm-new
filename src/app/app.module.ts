@@ -36,6 +36,7 @@ import { AddButtonComponent } from './components/add-button/add-button.component
       { path: 'table', component: TableComponent },
       { path: 'todos', component: TodoListsComponent },
       { path: 'todos/:id', component: TodoDetailComponent },
+      { path: 'todo-detail', component: TodoListsComponent },
       { path: 'about', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
      // { path: '**', component: PageNotFoundComponent } vagy  { path: '**', redirectTo: 'welcome', pathMatch: 'full' },

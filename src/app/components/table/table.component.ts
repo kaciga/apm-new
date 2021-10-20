@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { TodoService } from 'src/app/sevices/todo.service';
 import { ITodo } from 'src/app/todo';
 //import { StarsComponent } from '../stars/stars.component';
+Router
 
 @Component({
   // selector: 'pm-table',
@@ -24,6 +26,7 @@ import { ITodo } from 'src/app/todo';
 })
 export class TableComponent implements OnInit {
   private _todoService: any;
+  filteredTodos: ITodo[] | undefined;//automata javítás: | undefined
   onNotify(message: string): void {}
   faCheck = faCheck;
   pageTitle = "Táblázat";
@@ -42,14 +45,15 @@ export class TableComponent implements OnInit {
     this.filteredTodos = this.performFilter(value);
   }
 
-  filteredTodos: ITodo[] = [];
+  //private router: Router
   todos: ITodo[] = [];
 
   /*ez tökugyanaz, mint az utána következő, short hand TS-syntax:
   constructor(todoService: TodoService) { 
     this._todoService = TodoService;
   }*/
-  constructor(private todoService: TodoService) {
+  constructor(private todoService: TodoService,
+    private router: Router) {
 
   }
   

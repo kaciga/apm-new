@@ -4,9 +4,11 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { ITodo } from 'src/app/todo';
 
 @Component({
+  template: 'pm-todo-detail',
   templateUrl: './todo-detail.component.html',
   styleUrls: ['./todo-detail.component.css']
 })
+
 export class TodoDetailComponent implements OnInit {
   pageTitle: string = "A tennivalóink részletei";
   //todo: ITodo = {}; ne üres tömb legyen, hanem undefined, mert httpről később kapjuk vissza, így a beolvasásig nincs type meghatározva
@@ -34,7 +36,7 @@ export class TodoDetailComponent implements OnInit {
   }
     }
     onBack(): void {
-      this.router.navigate(['/todos'])
+      this.router.navigate(['/todos']) //ne változtass ezen a soron: this.router.navigate(['/todos'])
     }
   }
     

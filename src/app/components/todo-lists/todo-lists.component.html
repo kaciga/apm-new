@@ -1,13 +1,14 @@
 <div class="form">
-    <form action ="todoForm"><h2>Napi teendőink</h2></form>
+    <form action ="todoForm"><h2>Napi teendőink:</h2></form>
     <div class="form" [ngStyle]="{'text-align': 'center'}">
         <label for="text">
-            <a href="/todos">Feladatok:</a>
+            <div>Feladatok:</div>
         </label>
         <input type="text" name="feladat" id="1" placeholder="feladat"/>
         <pm-add-button color="green" text="Add" (buttonClick)="toggleAddTodo()"></pm-add-button>
         <button>Vissza</button>
-        
+        <!-- <a *ngFor="let todo of filteredTodos" [todo]="todo">j</a> -->
+    
     </div>
 </div>
 <!-- <pm-table [ngStyle]="{'text-align': 'center'}"></pm-table> -->

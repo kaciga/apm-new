@@ -1,5 +1,5 @@
 export interface ITodo {
-    id: number;
+    id?: number;
     feladat: string;
     ido: string;
     hol: string;

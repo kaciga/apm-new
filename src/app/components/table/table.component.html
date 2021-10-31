@@ -23,9 +23,11 @@
           <thead>
             <span>Tennivalók:</span>
             <tr>
-              <th>
+              <th class="firstTh">
                 <button
-                (click)='toggleImage()'>
+                (click)='toggleImage()'
+                >
+          <!-- (click)="setTheadWidth()" -->
                   {{ showImage ? 'Kép nélkül nézem!' : 'Mutasd képen!'}}
                 </button>
               </th>
@@ -49,6 +51,7 @@
                   [src]='todo.imgUrl'
                   [style.width.px]='imageWidth'
                   [style.margin.px]='imageMargin'>
+                  <!-- (click)="setTheadWidth()"> itt állítom a képre kattintás után mi történjen--> 
               </td>
               
               <td >
@@ -63,6 +66,7 @@
               <td>{{ todo.ar | currency: 'EUR': 'symbol'}}</td>
               <td><pm-stars 
                 [rating]='todo.star'
+                [ngStyle]="{'text-align': 'center'}"
                 (ratingClicked)="onRatingClicked($event)"
                 ></pm-stars></td>
               <td *ngIf="todo.isDone">

@@ -4,9 +4,9 @@ table {
     align-items: center;
     flex-wrap: wrap;
 }
-thead, tr {
-    border: 1px solid rgb(68, 58, 58);
-    background-color: rgb(161, 82, 235, 1);
+thead, tr, td {
+    border: 2px solid rgb(68, 58, 58);
+    background-color: lightcoral;
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
 }
@@ -53,10 +53,9 @@ td > fa-icon {
     width: 30px;
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
+    align-items: center;
 }
-/* td, tbody {
-    border: 2px solid rgb(125, 20, 223);
-    border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
-} */
-
+tbody {
+    width: 864px;
+    background-color: lightcoral;
+}

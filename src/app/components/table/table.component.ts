@@ -30,11 +30,11 @@ export class TableComponent implements OnInit {
   onNotify(message: string): void {}
   faCheck = faCheck;
   pageTitle = "Táblázat";
-  imageWidth = 200;
+  imageWidth = 90;
   imageMargin = 2;
-  showImage: boolean = true;
+  showImage: boolean = false;
   //listFilter: string = 'Mosdj meg!'
-  
+    
   private _listFilter = '';
   get listFilter() {
     return this._listFilter;
@@ -65,6 +65,18 @@ export class TableComponent implements OnInit {
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
+  
+  // setTheadWidth() {
+  //   if (this.showImage === true) {
+    
+  //     return console.log("yes");
+      
+  //   } else {
+  //     return console.log("no");
+      
+  //   }
+  // }
+    
 
   ngOnInit(): void {
     this.todos = this.todoService.getTodos();

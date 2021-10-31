@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   // selector: 'pm-welcome',
@@ -8,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
   public pageTitle: string = "Hellóóóó!"
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     console.log("élek");
     
+  }
+  onBack(): void {
+    this.router.navigate(['/todos']) //ne változtass ezen a soron: this.router.navigate(['/todos'])
   }
 
 }

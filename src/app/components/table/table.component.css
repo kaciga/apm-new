@@ -25,7 +25,6 @@ thead:first-child {
     text-align: center;
     margin-top: 20px;
 }
-
 span, .numeric{
     color: black;
     border-top-left-radius: 20%;
@@ -35,7 +34,8 @@ th {
     border: 2px solid blueviolet;
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
-}button {
+}
+button {
     /*visszagomb szín: rgb(138, 43, 226, 1);*/
     border-color: rgb(66, 12, 66);
     height: 35px;
@@ -47,3 +47,16 @@ a {
     color: blueviolet;
     margin-top: 20px;
 }
+td > fa-icon {
+    border: 2px solid rgb(125, 20, 223);
+    padding: 3px;
+    width: 30px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+/* td, tbody {
+    border: 2px solid rgb(125, 20, 223);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+} */
+

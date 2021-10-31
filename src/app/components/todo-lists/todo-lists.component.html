@@ -6,7 +6,7 @@
         </label>
         <input type="text" name="feladat" id="1" placeholder="feladat"/>
         <pm-add-button color="green" text="Add" (buttonClick)="toggleAddTodo()"></pm-add-button>
-        <button>Vissza</button>
+        <button (click)='onBack()'>Vissza</button>
         <!-- <a *ngFor="let todo of filteredTodos" [todo]="todo">j</a> -->
     
     </div>

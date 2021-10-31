@@ -32,7 +32,7 @@ export class TableComponent implements OnInit {
   pageTitle = "Táblázat";
   imageWidth = 200;
   imageMargin = 2;
-  showImage: boolean = false;
+  showImage: boolean = true;
   //listFilter: string = 'Mosdj meg!'
   
   private _listFilter = '';

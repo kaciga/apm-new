@@ -8,14 +8,16 @@ button {
     width: 100px;
     line-height: 2;
     margin: 5px 5px 20px 5px;
-
 }
 input {
-    height: 30px;
+    height: 33px;
     text-align: center;
     margin-right: 5px;
     font-size: larger;
 }
 a {
     font-size: larger;
+}
+h2 {
+    margin-top: 7px;
 }

@@ -1,6 +1,6 @@
 div {
     overflow: auto;
-    max-width: 80%;
+    max-width: 1000px;
     min-width: 300px;
     border: 10px dotted blueviolet;
     margin: 30px auto 30px;
